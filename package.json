@@ -11,7 +11,10 @@
   "packageManager": "npm@10.5.2",
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom"
+    "react-dom": "$react-dom",
+    "@tabler/icons-react": {
+      "react": "^19.0.0-rc"
+    }
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.1",
