@@ -32,7 +32,6 @@ const Work = () => {
     <Image
       src={`/assets/${project.img}`}
       alt="project thumbnail"
-      objectFit="fill"  // Ensures the image scales correctly within the container
       width={500}        // Fixed width
       height={300}       // Fixed height
       className="rounded-2xl object-cover" // Keeps the image rounded corners
