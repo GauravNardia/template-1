@@ -26,7 +26,7 @@ const Home = () => {
         <h1 data-aos="fade-up" data-aos-delay="100" className="text-transparent sm:h-14 bg-gradient-to-r from-blue-900 to-sky-600 bg-clip-text">
           What Will They Think
         </h1>
-        <h1 data-aos="fade-up" data-aos-delay="200" className="mt-2 sm:h-14 h-16 text-transparent bg-gradient-to-t from-black to-blue-900 bg-clip-text">
+        <h1 data-aos="fade-up" data-aos-delay="200" className="mt-2 sm:h-14 h-15 text-transparent bg-gradient-to-t from-black to-blue-900 bg-clip-text">
           When They See Your Website?
         </h1>
         <p data-aos="fade-up" data-aos-delay="300" className="sm:text-xl hidden sm:block text-sm px-4 text-gray-600 paragraph">
@@ -35,7 +35,7 @@ const Home = () => {
         </p>
         <p
           data-aos="fade-up" data-aos-delay="300"
-          className="sm:text-xl sm:hidden text-sm px-4 text-gray-600 mt-5 paragraph"
+          className="sm:text-xl sm:hidden text-sm px-4 text-gray-600 mt-1 paragraph"
         >
           First impressions are everything. Design that sparks curiosity and a
           platform that delivers.
