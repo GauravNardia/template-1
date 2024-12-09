@@ -1,5 +1,4 @@
 "use client";
-
 import Video from "@/components/shared/Video";
 import { MoveUpRight } from "lucide-react";
 import Link from "next/link";
@@ -8,9 +7,12 @@ import Work from "./work/page";
 import About from "@/components/shared/About";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { formatTime } from "@/lib/utils";
 
 const Home = () => {
+  const [timeLeft, setTimeLeft] = useState(10 * 60 * 60); // 10 hours in seconds
+
 
   useEffect(() => {
     AOS.init({
@@ -18,9 +20,23 @@ const Home = () => {
       easing: 'ease-in-out', // Animation easing
       once: false, // Whether animation should happen only once
     });
+
+        // Timer logic
+        const timer = setInterval(() => {
+          setTimeLeft((prev) => (prev > 0 ? prev - 1 : 10 * 60 * 60));
+        }, 1000);
+    
+        return () => clearInterval(timer); // Cleanup the interval on component unmount
   }, []);
 
   return (
+    <>
+ <section className="w-full flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-sky-500 mt-8 p-3  shadow-md">
+  <h1 className="text-white font-regular">
+    20% Discount Coming To An End, Hurry Up : {formatTime(timeLeft)}
+  </h1>
+</section>
+
     <section className="mt-20 sm:mt-32 flex flex-col justify-center items-center w-full">
       <div className="text-3xl flex flex-col justify-center w-full sm:text-5xl text-center">
         <h1 data-aos="fade-up" data-aos-delay="100" className="text-transparent sm:h-14 bg-gradient-to-r from-blue-900 to-sky-600 bg-clip-text">
@@ -67,6 +83,7 @@ const Home = () => {
       <Work />
       <About/>
     </section>
+    </>
   );
 };
 
