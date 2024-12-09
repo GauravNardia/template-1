@@ -16,7 +16,7 @@ const Work = () => {
   return (
     <>
     <section data-aos="fade-up"  className="w-full flex flex-col items-center py-8 mt-12 mb-20">
-      <h1 className="sm:text-4xl text-3xl text-center">
+      <h1 className="sm:text-4xl text-3xl text-center p-3 ">
         Work That Feels Like a Warm Hug
       </h1>
       <p className='sm:text-xl text-center sm:block text-sm px-4 text-gray-600 mt-3 paragraph'>every project is designed to comfort, uplift, and inspire</p>
