@@ -11,8 +11,8 @@ import { useEffect, useState } from "react";
 import { formatTime } from "@/lib/utils";
 
 const Home = () => {
-  const [timeLeft, setTimeLeft] = useState(10 * 60 * 60); // 10 hours in seconds
-
+  const TEN_HOURS = 10 * 60 * 60; // 10 hours in seconds
+  const [timeLeft, setTimeLeft] = useState(TEN_HOURS);
 
   useEffect(() => {
     AOS.init({
@@ -21,12 +21,39 @@ const Home = () => {
       once: false, // Whether animation should happen only once
     });
 
-        // Timer logic
-        const timer = setInterval(() => {
-          setTimeLeft((prev) => (prev > 0 ? prev - 1 : 10 * 60 * 60));
-        }, 1000);
-    
-        return () => clearInterval(timer); // Cleanup the interval on component unmount
+
+    // Retrieve the previous timer state from localStorage
+    const savedTime = localStorage.getItem("countdownStartTime");
+    const currentTime = Date.now();
+
+    if (savedTime) {
+      const elapsedTime = Math.floor((currentTime - parseInt(savedTime)) / 1000);
+      const remainingTime = TEN_HOURS - elapsedTime;
+
+      if (remainingTime > 0) {
+        setTimeLeft(remainingTime);
+      } else {
+        setTimeLeft(TEN_HOURS); // Restart timer if 10 hours have passed
+        localStorage.setItem("countdownStartTime", currentTime.toString());
+      }
+    } else {
+      localStorage.setItem("countdownStartTime", currentTime.toString());
+    }
+
+    // Timer logic
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev > 1) {
+          return prev - 1;
+        } else {
+          // Reset timer when it reaches zero
+          localStorage.setItem("countdownStartTime", Date.now().toString());
+          return TEN_HOURS;
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timer); // Cleanup timer on component unmount
   }, []);
 
   return (
