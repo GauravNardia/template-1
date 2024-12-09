@@ -87,7 +87,7 @@ const Home = () => {
 
       <div data-aos="fade-up" data-aos-delay="350" className="mt-6">
         <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdKHR7eFRucYj7QqzezKOWCxyfkALlxAeaQ-YrGVhVJnLkP4g/viewform?usp=dialog"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeEba1UP7XHu6ixYcxGKSDSmOjZq1aCeRN57psw8CPvbHQ4cg/viewform?usp=dialog"
           target="_blank"
           className="flex gap-2 items-center text-blue-500 text-xl hover:text-blue-300 hover:underline"
         >
