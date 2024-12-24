@@ -32,7 +32,7 @@ const Home = () => {
           First impressions are everything. Design that sparks curiosity <br />{" "}
           and a platform that delivers.
         </p>
-        <p
+        <p 
           data-aos="fade-up" data-aos-delay="300"
           className="sm:text-xl sm:hidden text-sm px-4 text-gray-600 mt-1 paragraph"
         >
