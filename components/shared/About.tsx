@@ -78,7 +78,7 @@ const About = () => {
       </Dialog>
 
     </div>
-        <Footer/>
+      
     </>
   );
 }

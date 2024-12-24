@@ -16,7 +16,7 @@ const Intro = () => {
         <p className="text-gray-600 text-center text-lg lg:text-xl mt-4">
           Gaurav Nardia turns your dream ideas into<br/> design and code in the real world.
         </p>
-        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeEba1UP7XHu6ixYcxGKSDSmOjZq1aCeRN57psw8CPvbHQ4cg/viewform?usp=dialog" target='_blank' className='mt-5' >
+        <Link href="#" target='_blank' className='mt-5' >
         <Button variant="link" className='flex text-blue-500 text-lg hover:gap-3 rounded-lg'>
           Let's connect<ChevronRight/>
         </Button>

@@ -96,11 +96,11 @@ const Frequently = () => {
     </div>
     <DialogDescription className="text-center flex flex-col mt-2 px-5 w-full flex flex-col justify-center items-center">
       This form clarifies important questions in advance. Please be as precise as possible, as it saves us both time.
-       <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeEba1UP7XHu6ixYcxGKSDSmOjZq1aCeRN57psw8CPvbHQ4cg/viewform?usp=dialog" target='_blank'
+       <Link href="#" target='_blank'
  className='w-full max-w-5 mb-5 flex justify-center items-center'>
        <Button className='mt-3 bg-blue-500 hover:bg-blue-400'>Fill the Form</Button>
        </Link>
-       Don't like forms? <Link href="mailto:gauravnardia07@gmail.com" className="text-blue-500">gauravnardia07@gmail.com</Link>
+       Don't like forms? <Link href="mailto:{youemail@gmai.com}.com" className="text-blue-500">youremail@gmail.com</Link>
     </DialogDescription>
   </DialogHeader>
   </DialogContent>
